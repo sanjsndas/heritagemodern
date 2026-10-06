@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Heritage Modern Spaces</title>
+  <meta name="description" content="Privacy Policy for Heritage Modern Spaces — how we handle your data, cookies, and correspondence.">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ed;
+      --border: #e0ddd8;
+      --border-dark: #c8c4bc;
+      --accent: #8b7355;
+      --accent-light: #b8a88a;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --content-width: 740px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.25; color: var(--ink); }
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.7rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1.1rem; color: var(--ink-light); }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .content-narrow { max-width: var(--content-width); margin: 0 auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-mark span { transform: rotate(-45deg); }
+    .logo em { font-style: normal; color: var(--accent); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0.4rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      max-width: 240px;
+      flex-shrink: 0;
+    }
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      width: 100%;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-bar input::placeholder { color: var(--ink-muted); font-style: italic; }
+    .search-bar button {
+      background: none;
+      border: none;
+      padding: 0.45rem 0.7rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* ========== PRIVACY PAGE ========== */
+    .privacy-page {
+      padding: 3.5rem 0 4rem;
+    }
+    .privacy-page .page-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .privacy-page .page-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .privacy-page .page-header p {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 620px;
+      margin-bottom: 0;
+    }
+    .privacy-page .page-header .last-updated {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* Policy content */
+    .policy-content {
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+    .policy-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-content h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+    .policy-content h3 {
+      font-size: 1.15rem;
+      margin-top: 1.6rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--serif);
+      color: var(--ink);
+    }
+    .policy-content p {
+      font-size: 0.98rem;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    .policy-content ul, .policy-content ol {
+      margin: 0.6rem 0 1.2rem 1.5rem;
+      color: var(--ink-light);
+      font-size: 0.98rem;
+    }
+    .policy-content li {
+      margin-bottom: 0.4rem;
+    }
+    .policy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .policy-content a {
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .policy-content a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .policy-note {
+      background: var(--paper-alt);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+    }
+    .policy-note p {
+      margin-bottom: 0;
+    }
+
+    /* Privacy quick summary cards */
+    .privacy-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .summary-card {
+      background: var(--paper-alt);
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.3rem;
+    }
+    .summary-card h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-family: var(--sans);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .summary-card p {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--paper-alt);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.85rem; color: var(--ink-light); }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .privacy-summary { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      h1 { font-size: 1.8rem; }
+      .privacy-page .page-header h1 { font-size: 1.9rem; }
+      .header-inner { flex-wrap: wrap; gap: 0.8rem; }
+      .search-bar { max-width: 100%; order: 3; flex: 1 1 100%; }
+      .nav-toggle { display: block; }
+      .main-nav { display: none; width: 100%; order: 4; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 0; }
+      .main-nav a { display: block; padding: 0.5rem 0.2rem; border-bottom: 1px solid var(--border); }
+      .privacy-summary { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .policy-content h2 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><span>HM</span></span>
+      Heritage<em>Modern</em>Spaces
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles…" oninput="handleSearch()">
+      <button onclick="handleSearch()">⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PRIVACY PAGE ========== -->
+<main class="container privacy-page">
+  <div class="page-header">
+    <h1>Privacy Policy</h1>
+    <p>Your trust matters to us. This policy explains what information we collect, how we use it, and the choices you have. We aim to be transparent and respectful of your privacy at every step.</p>
+    <div class="last-updated">Last updated: 1 January 2026</div>
+  </div>
+
+  <div class="policy-content">
+    <!-- Quick summary cards -->
+    <div class="privacy-summary">
+      <div class="summary-card">
+        <h4>We collect little</h4>
+        <p>We only ask for information we truly need — like your name and email when you write to us.</p>
+      </div>
+      <div class="summary-card">
+        <h4>We never sell</h4>
+        <p>Your data is never sold, rented, or traded to third parties. We are not a data broker.</p>
+      </div>
+      <div class="summary-card">
+        <h4>You're in control</h4>
+        <p>You can request access, correction, or deletion of your data at any time.</p>
+      </div>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>Heritage Modern Spaces ("we", "our", "us") is an independent editorial publication based in Torino, Italy. We are the data controller responsible for the personal information described in this policy. If you have any questions, you can reach us at <a href="mailto:privacy@heritagemodernspaces.com">privacy@heritagemodernspaces.com</a>.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect information in a few limited ways, depending on how you interact with our site:</p>
+
+    <h3>Information you give us directly</h3>
+    <ul>
+      <li><strong>Contact form and email correspondence:</strong> When you use our contact form or email us, we receive your name, email address, subject, and the content of your message.</li>
+      <li><strong>Newsletter subscription:</strong> If you subscribe to our newsletter, we collect your email address and, optionally, your first name.</li>
+      <li><strong>Letters to the editor or pitches:</strong> If you submit a letter or story pitch, we receive your contact details and any materials you send.</li>
+    </ul>
+
+    <h3>Information collected automatically</h3>
+    <p>Like most websites, we automatically receive some technical information when you visit:</p>
+    <ul>
+      <li>IP address (truncated or anonymized where possible)</li>
+      <li>Browser type and version</li>
+      <li>Operating system</li>
+      <li>Pages visited and time spent</li>
+      <li>Referring website or source</li>
+    </ul>
+    <p>This information is used in aggregate to understand how our site is used and to improve it. We do not use it to identify individual visitors.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+      <li><strong>To respond to your messages:</strong> When you contact us, we use your details to reply and to follow up if needed.</li>
+      <li><strong>To send our newsletter:</strong> If you subscribe, we use your email address to send you editorial updates. You can unsubscribe at any time.</li>
+      <li><strong>To publish letters and pitches:</strong> If you submit content for publication, we may use your name and message as part of that editorial process, with your consent.</li>
+      <li><strong>To improve our site:</strong> Aggregate analytics help us understand what content is useful and how to make the site better.</li>
+      <li><strong>To comply with legal obligations:</strong> In rare cases, we may need to retain or disclose information to meet legal requirements.</li>
+    </ul>
+
+    <div class="policy-note">
+      <p><strong>Our approach:</strong> We believe in data minimization. We do not ask for information we do not need, and we do not use your data for purposes beyond those described here.</p>
+    </div>
+
+    <h2>4. Legal Basis for Processing</h2>
+    <p>If you are located in the European Economic Area (EEA), our processing of your personal data is based on the following legal grounds:</p>
+    <ul>
+      <li><strong>Consent:</strong> When you subscribe to our newsletter or submit a form, you consent to our processing of that information. You can withdraw consent at any time.</li>
+      <li><strong>Legitimate interests:</strong> We have a legitimate interest in responding to correspondence, maintaining the security of our site, and understanding how our content is used.</li>
+      <li><strong>Legal obligation:</strong> Where we are required to retain or disclose information by law.</li>
+    </ul>
+
+    <h2>5. How We Store and Protect Your Information</h2>
+    <p>We take reasonable technical and organizational measures to protect your personal information from unauthorized access, loss, or misuse. This includes:</p>
+    <ul>
+      <li>Using secure servers and encrypted connections (HTTPS) across our site.</li>
+      <li>Limiting access to personal data to those who need it for editorial or administrative purposes.</li>
+      <li>Retaining information only for as long as necessary for the purposes described in this policy.</li>
+    </ul>
+    <p>Emails and contact form submissions are retained for up to 24 months, after which they are reviewed and securely deleted unless there is an ongoing editorial or legal reason to keep them.</p>
+
+    <h2>6. Sharing Your Information</h2>
+    <p>We do not sell, rent, or trade your personal information. We may share your data only in these limited circumstances:</p>
+    <ul>
+      <li><strong>Service providers:</strong> We use trusted third-party services for email delivery, hosting, and analytics. These providers process data on our behalf and are bound by confidentiality agreements.</li>
+      <li><strong>Legal requirements:</strong> If required by law, court order, or governmental authority, we may disclose information as necessary.</li>
+      <li><strong>Protection of rights:</strong> If we believe disclosure is necessary to protect our rights, property, or safety, or that of our readers or others.</li>
+    </ul>
+
+    <h2>7. Cookies and Tracking</h2>
+    <p>We use a minimal set of cookies to make our site work and to understand how it is used. For full details, please see our <a href="cookies.html">Cookies Policy</a>. In short:</p>
+    <ul>
+      <li><strong>Essential cookies:</strong> Required for basic site functionality.</li>
+      <li><strong>Analytics cookies:</strong> Used to collect anonymous, aggregated statistics about site usage.</li>
+    </ul>
+    <p>You can control or delete cookies through your browser settings at any time.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to access:</strong> You can request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification:</strong> You can ask us to correct any inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure:</strong> You can request that we delete your personal data, subject to certain legal limitations.</li>
+      <li><strong>Right to restrict processing:</strong> You can ask us to limit how we use your data.</li>
+      <li><strong>Right to data portability:</strong> You can request a copy of your data in a structured, machine-readable format.</li>
+      <li><strong>Right to object:</strong> You can object to processing based on legitimate interests.</li>
+      <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, you can withdraw it at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@heritagemodernspaces.com">privacy@heritagemodernspaces.com</a>. We will respond within 30 days.</p>
+
+    <h2>9. International Transfers</h2>
+    <p>Our site is hosted and operated primarily within the European Union. If we transfer personal data outside the EEA, we ensure appropriate safeguards are in place, such as standard contractual clauses approved by the European Commission.</p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>Our content is intended for a general audience and is not directed at children under 16. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us so we can delete it.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we make significant changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify you by email or through a notice on our site.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:privacy@heritagemodernspaces.com">privacy@heritagemodernspaces.com</a></li>
+      <li><strong>Post:</strong> Heritage Modern Spaces, Via della Rocca 14, 10123 Torino, Italy</li>
+    </ul>
+    <p>We are committed to working with you to resolve any privacy concerns. If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority.</p>
+
+    <div class="policy-note" style="margin-top:2.5rem;">
+      <p><em>This policy is provided for general informational purposes and does not constitute legal advice. For specific legal concerns, please consult a qualified professional.</em></p>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0.8rem;">
+          <span class="logo-mark"><span>HM</span></span>
+          Heritage<em>Modern</em>Spaces
+        </div>
+        <p>An independent journal of architecture, interior design, and the art of living well. Published since 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="index.html">Interior Design</a></li>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="index.html">Home Design</a></li>
+          <li><a href="index.html">Materials</a></li>
+          <li><a href="index.html">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heritage Modern Spaces. All rights reserved.</span>
+      <span>Made with care for people who read slowly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ---------- Nav toggle ----------
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+
+  // ---------- Search (redirect to home page) ----------
+  function handleSearch() {
+    const query = document.getElementById('searchInput').value.trim();
+    if (query) {
+      window.location.href = 'index.html?search=' + encodeURIComponent(query);
+    }
+  }
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSearch();
+    }
+  });
+
+  // ---------- Keyboard shortcut: / to focus search ----------
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !e.ctrlKey && !e.metaKey && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      document.getElementById('searchInput').focus();
+    }
+  });
+</script>
+
+</body>
+</html>

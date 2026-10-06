@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Heritage Modern Spaces</title>
+  <meta name="description" content="Terms of Service for Heritage Modern Spaces. Read the terms and conditions governing the use of our website and content.">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ed;
+      --border: #e0ddd8;
+      --border-dark: #c8c4bc;
+      --accent: #8b7355;
+      --accent-light: #b8a88a;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --content-width: 800px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.25; color: var(--ink); }
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.75rem; margin-top: 2.5rem; }
+    h3 { font-size: 1.15rem; margin-bottom: 0.5rem; margin-top: 1.8rem; }
+    p { margin-bottom: 1.1rem; color: var(--ink-light); }
+    .drop-cap::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.5rem;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .content-narrow { max-width: var(--content-width); margin: 0 auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-mark span { transform: rotate(-45deg); }
+    .logo em { font-style: normal; color: var(--accent); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0.4rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      max-width: 240px;
+      flex-shrink: 0;
+    }
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      width: 100%;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-bar input::placeholder { color: var(--ink-muted); font-style: italic; }
+    .search-bar button {
+      background: none;
+      border: none;
+      padding: 0.45rem 0.7rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* ========== TERMS PAGE STYLES ========== */
+    .terms-page {
+      padding: 3rem 0 4rem;
+      background: var(--paper);
+    }
+    .terms-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .terms-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .terms-header .meta {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      letter-spacing: 0.03em;
+    }
+    .terms-header .meta span {
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
+    .terms-content {
+      max-width: var(--content-width);
+    }
+    .terms-content p {
+      font-size: 0.98rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+    .terms-content ul, .terms-content ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+      color: var(--ink-light);
+    }
+    .terms-content li {
+      margin-bottom: 0.5rem;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .terms-content .highlight-box {
+      background: var(--paper-alt);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+    }
+    .terms-content .highlight-box p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--ink-muted);
+    }
+    .terms-content .back-to-top {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent-light);
+      padding-bottom: 0.15rem;
+    }
+    .terms-content .back-to-top:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .terms-content .legal-note {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--paper-alt);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.85rem; color: var(--ink-light); }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      h1 { font-size: 1.8rem; }
+      .terms-header h1 { font-size: 2rem; }
+      .header-inner { flex-wrap: wrap; gap: 0.8rem; }
+      .search-bar { max-width: 100%; order: 3; flex: 1 1 100%; }
+      .nav-toggle { display: block; }
+      .main-nav { display: none; width: 100%; order: 4; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 0; }
+      .main-nav a { display: block; padding: 0.5rem 0.2rem; border-bottom: 1px solid var(--border); }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .terms-content ul, .terms-content ol { margin-left: 1rem; }
+      .terms-header .meta span { display: block; margin-bottom: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><span>HM</span></span>
+      Heritage<em>Modern</em>Spaces
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html" class="active">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles…">
+      <button>⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== TERMS PAGE CONTENT ========== -->
+<main class="terms-page">
+  <div class="container">
+
+    <div class="terms-header">
+      <h1>Terms of Service</h1>
+      <div class="meta">
+        <span>Last updated: 15 March 2026</span>
+        <span>Effective: 1 April 2026</span>
+      </div>
+    </div>
+
+    <div class="terms-content">
+
+      <p class="drop-cap">Welcome to Heritage Modern Spaces. These Terms of Service ("Terms") govern your access to and use of the Heritage Modern Spaces website, including any content, functionality, and services offered on or through the site (the "Service").</p>
+
+      <p>Please read these Terms carefully before using the Service. By accessing or using any part of the Service, you agree to be bound by these Terms. If you do not agree to all the terms and conditions, you may not access the Service.</p>
+
+      <div class="highlight-box">
+        <p>In short: Use our site respectfully, don't republish our content without permission, and understand that we provide information for general guidance — not professional advice.</p>
+      </div>
+
+      <h2>1. Use of the Service</h2>
+      <p>Heritage Modern Spaces provides editorial content related to architecture, interior design, and related subjects. You may use the Service for lawful, personal, non-commercial purposes only.</p>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reproduce, duplicate, copy, sell, resell, or exploit any portion of the Service without express written permission from us.</li>
+        <li>Use the Service in any way that could damage, disable, overburden, or impair the site or interfere with any other party's use.</li>
+        <li>Attempt to gain unauthorized access to any portion of the Service, other accounts, computer systems, or networks connected to the Service.</li>
+        <li>Use any robot, spider, scraper, or other automated means to access the Service for any purpose without our express written permission.</li>
+        <li>Introduce any viruses, trojan horses, worms, or other material that is malicious or technologically harmful.</li>
+      </ul>
+
+      <h2>2. Intellectual Property</h2>
+      <p>All content published on Heritage Modern Spaces — including but not limited to text, articles, photographs, illustrations, graphics, logos, and the design and arrangement of the site — is the property of Heritage Modern Spaces or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws.</p>
+      <p>You may not modify, publish, transmit, participate in the transfer or sale of, create derivative works from, distribute, display, reproduce, or perform any content without our prior written consent.</p>
+      <p>You may, however, share links to our articles and quote brief excerpts (up to 100 words) for non-commercial purposes, provided you attribute the content to Heritage Modern Spaces and link back to the original article.</p>
+
+      <h2>3. User Contributions</h2>
+      <p>We may provide opportunities for you to submit comments, feedback, or other content. By submitting content, you grant us a non-exclusive, worldwide, royalty-free, perpetual, and irrevocable license to use, reproduce, modify, adapt, publish, and display such content in connection with the Service.</p>
+      <p>You represent and warrant that you own or control all rights to any content you submit and that such content does not violate any third-party rights or applicable laws.</p>
+
+      <h2>4. Third-Party Links & Resources</h2>
+      <p>The Service may contain links to third-party websites or resources. We provide these links for your convenience only and do not endorse, control, or assume responsibility for the content, privacy policies, or practices of any third-party sites.</p>
+      <p>You acknowledge and agree that Heritage Modern Spaces shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of any such third-party content, goods, or services.</p>
+
+      <h2>5. Disclaimer of Warranties</h2>
+      <p>The Service and all content are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. Heritage Modern Spaces disclaims all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+      <p>We do not warrant that the Service will be uninterrupted, error-free, secure, or free of viruses or other harmful components. We make no warranties regarding the accuracy, completeness, or usefulness of any content.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Heritage Modern Spaces, its editors, contributors, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Service.</p>
+      <p>This includes, without limitation, damages for loss of profits, goodwill, data, or other intangible losses, even if we have been advised of the possibility of such damages.</p>
+
+      <h2>7. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Heritage Modern Spaces, its officers, directors, employees, contributors, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable legal fees) arising out of or in any way connected with your access to or use of the Service or your violation of these Terms.</p>
+
+      <h2>8. Modifications to the Terms</h2>
+      <p>We reserve the right to modify or replace these Terms at any time. If we make material changes, we will post the updated Terms on this page and update the "Last updated" date at the top.</p>
+      <p>Your continued use of the Service after any such changes constitutes your acceptance of the new Terms. It is your responsibility to review this page periodically for changes.</p>
+
+      <h2>9. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Italy, without regard to its conflict of law provisions. Any legal action or proceeding arising under these Terms shall be brought exclusively in the courts located in Turin, Italy.</p>
+
+      <h2>10. Termination</h2>
+      <p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.</p>
+      <p>Upon termination, your right to use the Service will cease immediately. All provisions of these Terms which by their nature should survive termination shall survive.</p>
+
+      <h2>11. Contact</h2>
+      <p>If you have any questions about these Terms, please contact us at <a href="mailto:legal@heritagemodernspaces.com" style="color:var(--accent); border-bottom:1px solid var(--accent-light);">legal@heritagemodernspaces.com</a> or write to us at:</p>
+      <p style="font-size:0.95rem; color:var(--ink-muted);">
+        Heritage Modern Spaces<br>
+        Attn: Legal Department<br>
+        Via Roma 42<br>
+        10121 Turin, Italy
+      </p>
+
+      <div class="legal-note">
+        <p>This document is a general template and does not constitute legal advice. You should consult with a qualified legal professional to ensure compliance with all applicable laws and regulations specific to your jurisdiction.</p>
+      </div>
+
+      <a href="#" class="back-to-top">↑ Back to top</a>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0.8rem;">
+          <span class="logo-mark"><span>HM</span></span>
+          Heritage<em>Modern</em>Spaces
+        </div>
+        <p>An independent journal of architecture, interior design, and the art of living well. Published since 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="index.html">Interior Design</a></li>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="index.html">Home Design</a></li>
+          <li><a href="index.html">Materials</a></li>
+          <li><a href="index.html">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heritage Modern Spaces. All rights reserved.</span>
+      <span>Made with care for people who read slowly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ========== NAV TOGGLE (MOBILE) ==========
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+
+  // ========== SEARCH (placeholder — redirects to home with query) ==========
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      const q = this.value.trim();
+      if (q) {
+        window.location.href = 'index.html?search=' + encodeURIComponent(q);
+      }
+    }
+  });
+
+  // ========== SMOOTH SCROLL FOR BACK TO TOP ==========
+  document.querySelector('.back-to-top')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

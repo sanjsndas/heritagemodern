@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heritage Modern Spaces — Interior Design & Architecture Journal</title>
+  <meta name="description" content="Heritage Modern Spaces is an independent journal exploring architecture, interior design, and the art of living well. In-depth guides, design principles, and practical knowledge.">
+  <meta property="og:title" content="Heritage Modern Spaces — Interior Design & Architecture Journal">
+  <meta property="og:description" content="In-depth guides, design principles, and practical knowledge for thoughtful living.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://heritagemodernspaces.com">
+  <link rel="canonical" href="https://heritagemodernspaces.com">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ed;
+      --border: #e0ddd8;
+      --border-dark: #c8c4bc;
+      --accent: #8b7355;
+      --accent-light: #b8a88a;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --content-width: 740px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.25; color: var(--ink); }
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.7rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1.1rem; color: var(--ink-light); }
+    .drop-cap::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.5rem;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .content-narrow { max-width: var(--content-width); margin: 0 auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-mark span { transform: rotate(-45deg); }
+    .logo em { font-style: normal; color: var(--accent); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0.4rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      max-width: 240px;
+      flex-shrink: 0;
+    }
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      width: 100%;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-bar input::placeholder { color: var(--ink-muted); font-style: italic; }
+    .search-bar button {
+      background: none;
+      border: none;
+      padding: 0.45rem 0.7rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* ========== SIDEBAR LAYOUT ========== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* ========== FEATURED ARTICLE ========== */
+    .featured-article {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .featured-article .category-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .featured-article h1 { font-size: 2.6rem; margin-bottom: 0.8rem; }
+    .featured-article .excerpt {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+      max-width: 620px;
+    }
+    .featured-article .meta {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    /* ========== ARTICLE CARDS ========== */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .article-card {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      transition: opacity 0.2s;
+    }
+    .article-card:hover { opacity: 0.85; }
+    .article-card .category-tag {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .article-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .article-card h3 a:hover { color: var(--accent); }
+    .article-card .excerpt {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+    }
+    .article-card .meta {
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    /* ========== SECTION HEADINGS ========== */
+    .section-heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+
+    /* ========== SIDEBAR ========== */
+    .sidebar { font-size: 0.9rem; }
+    .sidebar-widget {
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-widget:last-child { border-bottom: none; }
+    .sidebar-widget h4 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .sidebar-widget ul { list-style: none; }
+    .sidebar-widget li { margin-bottom: 0.6rem; }
+    .sidebar-widget a { color: var(--ink-light); font-size: 0.88rem; }
+    .sidebar-widget a:hover { color: var(--accent); }
+    .sidebar-widget .meta { font-size: 0.72rem; color: var(--ink-muted); display: block; margin-top: 0.15rem; }
+
+    .about-widget p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.65; }
+
+    /* ========== CATEGORY PILLS ========== */
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .category-pills button {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.8rem;
+      font-size: 0.75rem;
+      font-family: var(--sans);
+      letter-spacing: 0.04em;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .category-pills button:hover,
+    .category-pills button.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    /* ========== NEWSLETTER ========== */
+    .newsletter-section {
+      background: var(--paper-alt);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+    .newsletter-section h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+    .newsletter-section p { font-size: 0.9rem; color: var(--ink-muted); margin-bottom: 1rem; }
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid var(--border-dark);
+      background: var(--paper);
+      font-size: 0.88rem;
+      font-family: var(--sans);
+      outline: none;
+    }
+    .newsletter-form input:focus { border-color: var(--accent); }
+    .newsletter-form button {
+      padding: 0.6rem 1.4rem;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s;
+    }
+    .newsletter-form button:hover { background: var(--accent); }
+
+    /* ========== FAQ ========== */
+    .faq-section { margin: 3rem 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      gap: 1rem;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-question .icon {
+      font-size: 1.2rem;
+      color: var(--accent);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      font-family: var(--sans);
+      font-weight: 300;
+    }
+    .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 1.5rem 0 0;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0.8rem 1.5rem 0.5rem 0;
+    }
+    .faq-answer p { font-size: 0.92rem; margin-bottom: 0.5rem; }
+
+    /* ========== IMAGE STYLES ========== */
+    .article-image {
+      margin: 1.5rem 0;
+    }
+    .article-image img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+    }
+    .article-image figcaption {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--paper-alt);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.85rem; color: var(--ink-light); }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* ========== MODAL / ABOUT-CONTACT ========== */
+    .static-page {
+      display: none;
+      padding: 3rem 0;
+    }
+    .static-page.active { display: block; }
+    .static-page h2 { margin-bottom: 1rem; }
+    .static-page h3 { margin-top: 2rem; margin-bottom: 0.6rem; }
+    .static-page p { max-width: 680px; }
+    .static-page .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--sans);
+      padding: 0;
+    }
+    .static-page .back-link:hover { text-decoration: underline; }
+
+    /* ========== ARTICLE DETAIL VIEW ========== */
+    .article-detail {
+      display: none;
+      padding: 2.5rem 0;
+    }
+    .article-detail.active { display: block; }
+    .article-detail h1 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .article-detail .article-meta {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .article-body { max-width: 740px; }
+    .article-body h2 { margin-top: 2rem; }
+    .article-body h3 { margin-top: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+    .article-body li { margin-bottom: 0.4rem; color: var(--ink-light); }
+    .author-box {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      background: var(--border);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--ink-muted);
+    }
+    .author-box h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .author-box p { font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 0; }
+
+    .related-articles {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ========== UTILITY ========== */
+    .hidden { display: none !important; }
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+    .text-center { text-align: center; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .sidebar { order: 2; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      h1 { font-size: 1.8rem; }
+      .featured-article h1 { font-size: 1.9rem; }
+      .header-inner { flex-wrap: wrap; gap: 0.8rem; }
+      .search-bar { max-width: 100%; order: 3; flex: 1 1 100%; }
+      .nav-toggle { display: block; }
+      .main-nav { display: none; width: 100%; order: 4; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 0; }
+      .main-nav a { display: block; padding: 0.5rem 0.2rem; border-bottom: 1px solid var(--border); }
+      .article-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form button { width: 100%; }
+      .article-detail h1 { font-size: 1.7rem; }
+      .author-box { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo" onclick="showHome(); return false;">
+      <span class="logo-mark"><span>HM</span></span>
+      Heritage<em>Modern</em>Spaces
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles…" oninput="searchArticles()">
+      <button onclick="searchArticles()">⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HOME VIEW ========== -->
+<main class="container" id="homeView">
+  <div class="main-layout">
+    <!-- LEFT COLUMN: ARTICLES -->
+    <div class="articles-column">
+
+      <!-- FEATURED ARTICLE -->
+      <div class="featured-article" id="featuredSection">
+        <span class="category-tag">Architecture</span>
+        <h1>The Quiet Power of Heritage Modernism: When Old Bones Meet New Light</h1>
+        <p class="excerpt">How the most compelling contemporary interiors are those that listen to the past — preserving patina, proportion, and story while introducing clarity and comfort for modern life.</p>
+        <div class="meta">
+          <span>By Elena Marchetti</span>
+          <span>12 min read</span>
+          <span>March 2026</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY FILTER PILLS -->
+      <div class="category-pills" id="categoryPills">
+        <button class="active" onclick="filterArticles('all')">All</button>
+        <button onclick="filterArticles('interior-design')">Interior Design</button>
+        <button onclick="filterArticles('architecture')">Architecture</button>
+        <button onclick="filterArticles('home-design')">Home Design</button>
+        <button onclick="filterArticles('materials')">Materials</button>
+        <button onclick="filterArticles('lighting')">Lighting</button>
+        <button onclick="filterArticles('space-planning')">Space Planning</button>
+        <button onclick="filterArticles('furniture')">Furniture</button>
+      </div>
+
+      <!-- ARTICLE GRID -->
+      <div class="article-grid" id="articleGrid"></div>
+
+      <!-- NEWSLETTER -->
+      <div class="newsletter-section">
+        <h3>The Sunday Edit</h3>
+        <p>One thoughtful essay on architecture, interiors, and the art of living well — delivered weekly. No noise, no filler.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you — please check your inbox to confirm.');">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- FAQ -->
+      <section class="faq-section">
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I choose between an interior designer and an interior architect?</span>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer"><p>Interior designers focus on aesthetics, furnishing, and the sensory experience of a room. Interior architects also address structural changes — moving walls, altering ceiling heights, reconfiguring plumbing and electrical systems. For renovations involving structural work, an interior architect or licensed architect is essential. For styling and furnishing a sound existing space, an interior designer is often the better fit.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What is the single most important principle in space planning?</span>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer"><p>Circulation. Every room needs a clear, unobstructed path — ideally 90 centimeters wide in primary routes. Beautiful furniture in a room with poor circulation will always feel wrong. Plan movement first, then place objects. This one principle resolves more design problems than any other.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How much should I budget for a full interior renovation?</span>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer"><p>A reasonable planning figure for a mid-range renovation is 800–1,500 USD per square meter, depending on region and scope. Luxury finishes and structural work push this higher. Always reserve 15–20% of your budget for contingencies — unexpected discoveries behind walls are the norm, not the exception.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Are open-plan layouts always better?</span>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer"><p>No. Open plan works beautifully for social cooking and family life, but it fails for focused work, quiet reading, and acoustic privacy. The best contemporary layouts are "broken plan" — mostly open, with one or two strategic enclosures (a study, a snug, a utility room) that provide retreat without sacrificing light.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I make a small room feel larger?</span>
+            <span class="icon">+</span>
+          </div>
+          <div class="faq-answer"><p>Three reliable moves: (1) Keep the floor plane continuous — same flooring throughout, no thresholds. (2) Use large-scale furniture, not small pieces; many small objects create visual clutter. (3) Place the largest piece of furniture against the longest wall to preserve clear sightlines. Mirrors and light colors help, but circulation and sightlines matter more.</p></div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-widget about-widget">
+        <h4>About This Journal</h4>
+        <p>Heritage Modern Spaces is an independent publication exploring the intersection of architectural tradition and contemporary living. We publish long-form guides, design principles, and practical knowledge for people who care about how spaces feel.</p>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Popular This Month</h4>
+        <ul id="popularList"></ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Latest Articles</h4>
+        <ul id="latestList"></ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Explore Topics</h4>
+        <ul>
+          <li><a href="#" onclick="filterArticles('interior-design'); return false;">Interior Design</a></li>
+          <li><a href="#" onclick="filterArticles('architecture'); return false;">Architecture</a></li>
+          <li><a href="#" onclick="filterArticles('materials'); return false;">Materials & Finishes</a></li>
+          <li><a href="#" onclick="filterArticles('lighting'); return false;">Lighting Design</a></li>
+          <li><a href="#" onclick="filterArticles('space-planning'); return false;">Space Planning</a></li>
+          <li><a href="#" onclick="filterArticles('furniture'); return false;">Furniture</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Editor's Note</h4>
+        <p style="font-size:0.85rem;color:var(--ink-muted);font-style:italic;line-height:1.7;">"A room is not a container. It is a conversation between light, material, and the person who inhabits it." — Elena Marchetti, Editor</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- ========== ARTICLE DETAIL VIEW ========== -->
+<main class="container article-detail" id="articleDetail">
+  <button class="back-link" onclick="showHome()">← Back to all articles</button>
+  <div class="article-body" id="articleBody"></div>
+</main>
+
+<!-- ========== STATIC PAGES (About, Contact, Privacy, Terms, Cookie) ========== -->
+<main class="container static-page" id="pageAbout">
+  <button class="back-link" onclick="showHome()">← Back</button>
+  <h2>About Heritage Modern Spaces</h2>
+  <p>Heritage Modern Spaces is an independent editorial publication founded in 2021 with a simple conviction: that the way we shape our built environment shapes the way we live. We publish in-depth writing on architecture, interior design, materials, and the quiet craft of making a home.</p>
+  <h3>Our Approach</h3>
+  <p>We believe design writing should be useful. Every article is written to be read slowly — with enough depth to inform a real decision, a renovation, or a shift in perspective. We avoid trend lists, shallow roundups, and corporate promotion. What we publish is the result of research, observation, and conversations with architects, makers, and residents.</p>
+  <h3>Editorial Independence</h3>
+  <p>We accept no sponsored content and receive no payment from brands or manufacturers. When we mention products or materials, it is because they are relevant to the subject at hand — not because someone paid for the placement.</p>
+  <h3>Who We Are</h3>
+  <p>Our contributors include architects, interior designers, historians, and writers based across Europe and North America. The publication is edited by Elena Marchetti, an architectural historian and former editor at <em>Domus</em>.</p>
+</main>
+
+<main class="container static-page" id="pageContact">
+  <button class="back-link" onclick="showHome()">← Back</button>
+  <h2>Contact</h2>
+  <p>We welcome thoughtful correspondence — story pitches, corrections, letters, and questions from readers.</p>
+  <h3>Editorial</h3>
+  <p>For story proposals and editorial inquiries: <a href="mailto:editor@heritagemodernspaces.com">editor@heritagemodernspaces.com</a></p>
+  <h3>Letters to the Editor</h3>
+  <p>We publish a selection of reader letters each month. Write to <a href="mailto:letters@heritagemodernspaces.com">letters@heritagemodernspaces.com</a> with "Letters" in the subject line.</p>
+  <h3>General</h3>
+  <p>For all other inquiries: <a href="mailto:hello@heritagemodernspaces.com">hello@heritagemodernspaces.com</a></p>
+</main>
+
+<main class="container static-page" id="pagePrivacy">
+  <button class="back-link" onclick="showHome()">← Back</button>
+  <h2>Privacy Policy</h2>
+  <p><em>Last updated: March 2026</em></p>
+  <h3>What We Collect</h3>
+  <p>We collect only what is necessary to operate the publication: email addresses for newsletter subscribers, and anonymous analytics data (pages viewed, time on site) to understand what readers find useful.</p>
+  <h3>How We Use It</h3>
+  <p>Email addresses are used solely to deliver the newsletter. We do not sell, rent, or share subscriber data with third parties. Analytics data is aggregated and never tied to individual identities.</p>
+  <h3>Cookies</h3>
+  <p>We use a minimal set of cookies for site functionality and anonymous analytics. You can disable cookies in your browser settings without affecting your ability to read the site.</p>
+  <h3>Your Rights</h3>
+  <p>You may request deletion of your data at any time by writing to privacy@heritagemodernspaces.com.</p>
+</main>
+
+<main class="container static-page" id="pageTerms">
+  <button class="back-link" onclick="showHome()">← Back</button>
+  <h2>Terms of Use</h2>
+  <p><em>Last updated: March 2026</em></p>
+  <h3>Content</h3>
+  <p>All editorial content on Heritage Modern Spaces is original and protected by copyright. You may quote short excerpts with attribution and a link. Reproduction of full articles requires written permission.</p>
+  <h3>Accuracy</h3>
+  <p>We strive for accuracy in all our reporting and guides. However, design and construction practices vary by region and circumstance. Nothing published here constitutes professional architectural, engineering, or legal advice. Always consult qualified local professionals for your specific project.</p>
+  <h3>Comments and Correspondence</h3>
+  <p>We welcome reader engagement but reserve the right to decline publication of correspondence that is abusive, promotional, or irrelevant to our editorial mission.</p>
+</main>
+
+<main class="container static-page" id="pageCookies">
+  <button class="back-link" onclick="showHome()">← Back</button>
+  <h2>Cookie Policy</h2>
+  <p><em>Last updated: March 2026</em></p>
+  <h3>Essential Cookies</h3>
+  <p>These enable basic site functions such as remembering your newsletter subscription status. They cannot be disabled through our site settings.</p>
+  <h3>Analytics Cookies</h3>
+  <p>We use a self-hosted, privacy-respecting analytics tool that records aggregate page views and referrers. No personal data is stored, and no third-party tracking scripts are used.</p>
+  <h3>Managing Cookies</h3>
+  <p>You can block or delete cookies through your browser settings. Doing so will not prevent you from reading articles.</p>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0.8rem;">
+          <span class="logo-mark"><span>HM</span></span>
+          Heritage<em>Modern</em>Spaces
+        </div>
+        <p>An independent journal of architecture, interior design, and the art of living well. Published since 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="#" onclick="filterArticles('interior-design'); return false;">Interior Design</a></li>
+          <li><a href="#" onclick="filterArticles('architecture'); return false;">Architecture</a></li>
+          <li><a href="#" onclick="filterArticles('home-design'); return false;">Home Design</a></li>
+          <li><a href="#" onclick="filterArticles('materials'); return false;">Materials</a></li>
+          <li><a href="#" onclick="filterArticles('lighting'); return false;">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+          <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
+          <li><a href="#" onclick="showPage('privacy'); return false;">Privacy</a></li>
+          <li><a href="#" onclick="showPage('terms'); return false;">Terms</a></li>
+          <li><a href="#" onclick="showPage('cookies'); return false;">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heritage Modern Spaces. All rights reserved.</span>
+      <span>Made with care for people who read slowly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ========== ARTICLE DATA ==========
+  const articles = [
+    {
+      id: 'quiet-power-heritage-modernism',
+      title: 'The Quiet Power of Heritage Modernism: When Old Bones Meet New Light',
+      category: 'architecture',
+      categoryLabel: 'Architecture',
+      excerpt: 'How the most compelling contemporary interiors are those that listen to the past — preserving patina, proportion, and story while introducing clarity and comfort for modern life.',
+      readingTime: '12 min read',
+      date: 'March 2026',
+      featured: true,
+      popular: true,
+      body: `
+        <p class="drop-cap">The most memorable rooms I have ever stood in were not the newest, nor the most expensive, nor the most photographed. They were rooms that had been allowed to age — and then, at some point, gently interrupted. A nineteenth-century stone wall meeting a sheet of frameless glass. A herringbone floor worn uneven by a century of footsteps, now supporting a single, almost impossibly slim steel table. These are the spaces where heritage modernism lives: not a style, but a conversation between what was and what could be.</p>
+        <p>The impulse to preserve is old. The impulse to transform is equally old. What distinguishes the best contemporary work in historic buildings is a refusal to choose between them. Instead of restoring a room to a frozen moment in its past, or gutting it beyond recognition, heritage modernism asks a harder question: what is worth keeping, and what is worth changing?</p>
+
+        <h2>Reading the Building</h2>
+        <p>Before a single wall is touched, the building itself must be read. Not inspected — read. What was the original logic of the plan? Where did light enter, and at what times? Which walls were load-bearing, and which were simply the result of a later century's expediency? The answers to these questions determine the entire trajectory of a project.</p>
+        <p>In a Georgian townhouse, the hierarchy is clear: formal rooms at the front, service spaces at the back, a staircase that rises with increasing intimacy toward the private floors above. The worst thing a designer can do is flatten that hierarchy. The best thing is to amplify it — making the formal rooms feel more generous, the private rooms more tucked away.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Renovated historic interior with exposed stone wall and modern furniture" loading="lazy">
+          <figcaption>A stone wall retained and cleaned, rather than covered — the patina becomes the room's most valuable finish.</figcaption>
+        </figure>
+
+        <h2>The Case for Doing Less</h2>
+        <p>There is a particular kind of confidence required to leave something alone. The renovation industry rewards intervention; the most visible transformations are often the most celebrated. But heritage modernism is not about visibility. It is about calibration.</p>
+        <p>Consider the floor. A nineteenth-century pine board, cleaned and sealed but not replaced, carries more information — about the house's construction, its inhabitants, its passage through time — than any new surface ever could. The same is true of a plaster wall with its small irregularities, a door that has settled slightly out of square, a window that lets in a draught you have decided, consciously, to accept.</p>
+
+        <h3>What to Keep, What to Change</h3>
+        <p>The decision-making framework is practical rather than sentimental. Keep elements that perform their function well and would be difficult or costly to replicate: structural stone or brick, original timber, lime plaster in good condition, cast iron radiators, well-proportioned sash windows. Change elements that no longer serve the life the building is being asked to hold: inadequate electrics, inefficient glazing, cramped circulation, damp-prone modern render.</p>
+        <p>The goal is not to create a museum. It is to create a home that carries its history lightly — visible, present, but never overwhelming.</p>
+
+        <h2>Light as the Bridge</h2>
+        <p>Nowhere is the conversation between old and new clearer than in the treatment of light. Historic buildings were designed for a world of candles, oil lamps, and daylight. Their window openings are sized and placed for a particular quality of illumination — often soft, indirect, and uneven. Contemporary life demands more, but the answer is rarely to enlarge the windows.</p>
+        <p>The most successful heritage-modern projects layer light deliberately. Daylight is allowed to do what it does best: define the character of a room over the course of a day. Artificial light is then added with restraint — never in the quantity of a modern office, but with the precision of a portrait photographer. A single well-placed pendant in a dining room. A hidden wash of light along a cornice. A floor-level glow where a doorway transitions from one space to another.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Living room in a historic building with modern lighting and contemporary furniture" loading="lazy">
+          <figcaption>Contemporary furniture in a historic shell — the proportions of the room remain the dominant presence.</figcaption>
+        </figure>
+
+        <h2>Materials That Age Well</h2>
+        <p>One of the practical lessons of working with historic buildings is that they were built from materials designed to weather. Lime mortar moves. Solid timber breathes. Stone wears at the edges but does not crumble. These are qualities that most twentieth-century building materials — portland cement, gypsum board, vinyl — lack entirely.</p>
+        <p>The best contemporary interventions respect this logic. When new material is introduced, it should either be clearly of its time (steel, glass, engineered timber in its natural finish) or compatible with the old in its behavior (lime plaster, reclaimed brick, terracotta). What it should never be is an imitation — a modern material pretending to be historic. That is neither honest nor durable.</p>
+
+        <h2>The Lived Experience</h2>
+        <p>What does heritage modernism feel like to inhabit? It feels calm. Not because it is quiet — old buildings have their own acoustic character, and it is often part of their charm — but because it is not arguing with itself. The proportions are sound, the materials are in dialogue, the light does what it is supposed to do.</p>
+        <p>It also feels particular. Every historic building has its own irregularities, its own moments of unexpected character. A window that frames a tree. A beam that slopes for no reason anyone remembers. A step that is slightly too high. These are not flaws to be corrected; they are the building's handwriting.</p>
+        <p>The best heritage-modern projects do not erase that handwriting. They read it, and they add a sentence of their own — in a different hand, but in the same language.</p>
+
+        <h2>Where to Begin</h2>
+        <p>For anyone considering a heritage-modern approach, the first step is not design. It is documentation. Photograph everything before it is touched. Record dimensions. Note where light falls at different times of day. Understand what the building was before deciding what it might become.</p>
+        <p>The second step is to identify the non-negotiables: the elements that, if lost, would make the building feel like any other. These become the fixed points around which the rest of the design orbits.</p>
+        <p>The third step is patience. Heritage modernism is not a fast process. It involves more listening than deciding, more subtraction than addition. But the result — a home that is both deeply rooted and fully alive — is worth the time it takes.</p>
+      `
+    },
+    {
+      id: 'small-apartment-design',
+      title: 'Small Apartment, Large Life: A Practical Guide to Designing 45 Square Meters',
+      category: 'space-planning',
+      categoryLabel: 'Space Planning',
+      excerpt: 'Compact living is not about sacrifice. It is about precision. A room-by-room guide to making a small apartment feel generous, functional, and calm.',
+      readingTime: '14 min read',
+      date: 'February 2026',
+      popular: true,
+      body: `
+        <p>The mathematics of small-space design are unforgiving. You have fewer square meters than you need, and every decision compounds. But the mathematics are also liberating: in a large apartment, a badly placed sofa is a minor annoyance. In a small one, it is a crisis. Which means that in a small apartment, every decision, made well, has an outsized effect.</p>
+
+        <h2>Start with the Plan, Not the Furniture</h2>
+        <p>The most common mistake in small apartments is beginning with objects. A sofa is chosen because it is beautiful. A dining table is chosen because it is the right size for four. Then both are placed, and the room is full. The result is a space that holds furniture but does not hold life.</p>
+        <p>The correct sequence is the opposite. Begin with circulation — the paths you walk every day. From the door to the kitchen. From the bed to the bathroom. From the sofa to the window. Mark these paths mentally, or on paper. They are the arteries of the apartment, and they must remain clear.</p>
+        <p>Once circulation is established, the remaining zones reveal themselves. Not "living room" and "bedroom" in the abstract, but specific areas: a place to sit and read, a place to eat, a place to sleep. These may overlap. They may shift. But they must each exist.</p>
+
+        <h3>The 60-Centimeter Rule</h3>
+        <p>In small spaces, 60 centimeters is the minimum dimension for comfortable circulation. Paths narrower than this feel like obstacles. At 80 centimeters, movement feels natural. At 100 centimeters, it feels generous. Where possible, choose generosity.</p>
+
+        <h2>The Illusion of Space</h2>
+        <p>Visual tricks help, but only after the plan is sound. A mirror on a wall that reflects a window will extend the perceived depth of a room. A continuous floor material — the same tile or timber running from hallway to living area — will make two small rooms read as one. A curtain hung near the ceiling, rather than just above the window frame, will make a window feel taller.</p>
+        <p>These are useful. They are not the foundation. A badly planned room with clever mirrors is still a badly planned room.</p>
+
+        <h2>Furniture That Earns Its Place</h2>
+        <p>In a 45-square-meter apartment, every object is a tenant. It pays rent in utility or in beauty — ideally both. The sofa that is merely acceptable is not worth its footprint. The table that is too large for the space it occupies is actively hostile.</p>
+        <p>Prioritize furniture that performs multiple functions. A dining table that folds to become a desk. A sofa with storage beneath. A bed raised on legs, allowing boxes to slide underneath. A sideboard that is deep enough to hold files and crockery.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80" alt="Compact modern apartment interior with multi-functional furniture and clean lines" loading="lazy">
+          <figcaption>Multi-functional furniture in a compact apartment — each piece earns its footprint.</figcaption>
+        </figure>
+
+        <h3>Scale, Not Size</h3>
+        <p>There is a counterintuitive rule in small-space design: small furniture makes small rooms feel smaller. A tiny armchair in a corner creates visual clutter — many small shapes, each demanding attention. A slightly larger sofa, placed against the longest wall, reads as a single gesture and makes the room feel more spacious.</p>
+        <p>Choose fewer, larger pieces. A single substantial sofa. One generous rug. One large artwork rather than a cluster of small frames.</p>
+
+        <h2>Light: The Quiet Expander</h2>
+        <p>In a small apartment, light is the most valuable material you have. Daylight, where it exists, should be allowed to travel as far as possible. Keep windowsills clear. Avoid heavy curtains that block light even when open. Use light-colored surfaces on walls and ceilings to bounce illumination into the depths of the room.</p>
+        <p>Artificial light should be layered. Overhead light alone flattens a space and reveals its smallness. A combination of floor lamp, table lamp, and a focused task light creates pools of illumination that suggest depth and extension.</p>
+
+        <h2>Storage Without Clutter</h2>
+        <p>In a small apartment, storage is not a room — it is a strategy. The goal is not to have more storage but to have storage that integrates. A wall of closed cabinets, floor to ceiling, will hold more than a scattering of open shelves and will read as architecture rather than furniture.</p>
+        <p>Vertical space is the small apartment's greatest untapped resource. Above doors, above windows, along the upper walls of a hallway — these are zones where storage can live without consuming floor area.</p>
+
+        <h2>The Emotional Dimension</h2>
+        <p>A small apartment can feel like a compromise, or it can feel like a choice. The difference is largely emotional. A space that is well-organized, well-lit, and free of visual noise feels intentional. A space that is cluttered, dim, and poorly planned feels like a failure.</p>
+        <p>The most important design decision in a small apartment is not a purchase. It is a discipline: the willingness to keep surfaces clear, to avoid accumulating objects that do not serve a purpose, to edit continuously. This is not minimalism as aesthetics. It is minimalism as maintenance.</p>
+
+        <h2>Room by Room</h2>
+        <p><strong>Kitchen:</strong> Maximize counter space by extending it along the full wall. Use a single, deep sink rather than a divided one. Choose an induction hob that doubles as counter space when off.</p>
+        <p><strong>Living area:</strong> Anchor the room with a rug that is large enough to sit on, not just under. Place the largest piece of furniture parallel to the longest wall. Keep the floor between furniture and the window clear.</p>
+        <p><strong>Sleeping area:</strong> The bed should be the calmest object in the apartment. Choose a simple frame with space beneath. Use wall-mounted lights rather than bedside lamps to free the surface.</p>
+        <p><strong>Bathroom:</strong> A walk-in shower without a threshold reads as larger than a shower with a tray. A floating vanity keeps the floor visible, which makes the room feel wider.</p>
+      `
+    },
+    {
+      id: 'lighting-design-principles',
+      title: 'Lighting Design: The Difference Between a Room That Works and a Room That Feels',
+      category: 'lighting',
+      categoryLabel: 'Lighting',
+      excerpt: 'Lighting is not about illumination. It is about atmosphere, hierarchy, and the quiet choreography of a day. A practical guide to designing with light.',
+      readingTime: '11 min read',
+      date: 'February 2026',
+      popular: true,
+      body: `
+        <p>Most rooms are lit badly. Not because the people who designed them lacked taste, but because lighting is the least intuitive of all design disciplines. We can see a badly proportioned room, a clashing palette, a cheap material. But bad lighting is invisible in the way that bad air is invisible — it is felt as discomfort, not perceived as design.</p>
+
+        <h2>The Two Questions</h2>
+        <p>Every lighting scheme answers two questions: what needs to be seen, and how should the room feel? These are not the same question. A kitchen counter needs to be seen: task light is required, with a color temperature around 3000–4000K, positioned to avoid shadow. A living room needs to feel: warm light (2700–3000K), layered, with sources at different heights and intensities.</p>
+        <p>Most rooms need both. The art is in the balance.</p>
+
+        <h2>Layers, Not Sources</h2>
+        <p>The single most common lighting error is the single source. One ceiling light in the center of a room produces flat, shadowless illumination — functional in a hospital corridor, dispiriting in a home. The solution is not more light but more layers.</p>
+        <p>A well-lit living room might have four layers: ambient light (a dimmable ceiling fixture or uplight for general illumination), task light (a floor lamp beside a reading chair), accent light (a picture light or a small table lamp on a shelf), and architectural light (a hidden strip behind a cornice or under a cabinet, providing a soft glow without a visible source).</p>
+
+        <h2>Height Matters</h2>
+        <p>Light at eye level is friendly. Light above eye level is functional. Light below eye level is dramatic. The most comfortable rooms use all three, in proportion to their purpose.</p>
+        <p>A dining table benefits from a pendant hung low — the bulb within the sightline of seated diners, creating intimacy. A hallway benefits from wall-mounted fixtures at shoulder height, avoiding the tunnel effect of ceiling lights. A living room benefits from the combination of a high ambient glow and low pools of task light.</p>
+
+        <h3>The 30–70–100 Rule</h3>
+        <p>A useful guideline for luminous intensity: ambient light should be dim enough that you notice when it is switched off, but not so bright that it dominates. Task light should be approximately twice the intensity of ambient. Accent light, used sparingly, can be three times as bright, because it covers a small area. The proportions matter more than the absolute numbers.</p>
+
+        <h2>Color Temperature</h2>
+        <p>Light has a temperature, measured in Kelvin. The higher the number, the bluer the light. Candlelight is around 1800K. Incandescent bulbs are around 2700K. Halogen is around 3000K. Daylight on an overcast day is around 6500K.</p>
+        <p>For residential interiors, the comfortable range is narrow: 2700K for living and sleeping areas, 3000K for kitchens and bathrooms where task accuracy matters. Anything above 3500K in a home will feel clinical. Anything below 2400K will feel dim and orange — useful in a dining room, oppressive in a kitchen.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&q=80" alt="Warm layered lighting in a contemporary living room with multiple light sources" loading="lazy">
+          <figcaption>Layered lighting: a low pendant, a floor lamp, and a hidden wash of light along the ceiling.</figcaption>
+        </figure>
+
+        <h2>Control</h2>
+        <p>The difference between good lighting and great lighting is often control. Dimmers are not a luxury; they are a functional requirement. The ability to reduce light by half in the evening, or to bring a single accent light up while dimming the rest, is what allows a room to shift from work to rest without being rearranged.</p>
+        <p>Ideally, every light source should be independently controlled. This is rarely possible within a budget, but the principle should guide the design: group lights by function, not by room.</p>
+
+        <h2>The Most Common Mistakes</h2>
+        <p><strong>Recessed downlights everywhere.</strong> A grid of ceiling downlights produces scalloped walls and harsh shadows. Use them sparingly, and always with a dimmer.</p>
+        <p><strong>Matching all light sources.</strong> A room where every fixture is the same style, the same height, and the same intensity will feel monotonous. Variety, within a controlled palette, creates rhythm.</p>
+        <p><strong>Forgetting the ceiling.</strong> An unlit ceiling can feel like a dark void in the evening. An uplight, or a wash of light across the ceiling plane, makes the room feel complete.</p>
+      `
+    },
+    {
+      id: 'kitchen-design-guide',
+      title: 'The Working Kitchen: Design Principles for a Room That Actually Functions',
+      category: 'home-design',
+      categoryLabel: 'Home Design',
+      excerpt: 'A kitchen is not a showroom. It is a workshop. The best kitchens are designed around movement, storage, and the quiet efficiency of a well-planned sequence.',
+      readingTime: '13 min read',
+      date: 'January 2026',
+      body: `
+        <p>The modern kitchen is asked to do more than any other room in the house. It is a cooking space, a social space, a workspace, a dining room, sometimes a laundry. It is also, in most homes, the room with the most complex infrastructure — plumbing, electrical, ventilation, gas. The result is that kitchen design is unforgiving. A mistake made in the living room can be hidden with furniture. A mistake made in the kitchen is structural.</p>
+
+        <h2>The Work Triangle, Revisited</h2>
+        <p>The classic work triangle — sink, stove, refrigerator — remains a useful organizing principle. The three points should be between 1.2 and 2.7 meters apart, forming a triangle whose total perimeter is between 4 and 8 meters. Smaller than this and you are cramped. Larger and you are walking.</p>
+        <p>But the work triangle assumes a single cook. In a household with two or more people cooking simultaneously, the triangle becomes a problem — two people working within the same small zone will collide. The contemporary answer is a "work zone" approach: the triangle remains for the primary cook, but additional zones (a prep sink, a second counter) are placed to allow parallel work.</p>
+
+        <h2>The Sequence of Use</h2>
+        <p>A well-designed kitchen follows the sequence of cooking: storage → preparation → cooking → serving. The refrigerator should be near the entry point, so that groceries can be put away without crossing the room. The sink should be central, because it is used more than any other station. The stove should be near the serving area, because hot food travels badly.</p>
+        <p>Interrupting this sequence is the most common kitchen design error. A refrigerator placed at the far end of the room, away from the entry. A sink squeezed into a corner. A stove with no adjacent counter for resting a pan. These are not aesthetic problems; they are functional ones, and they will be felt every day.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Well-organized modern kitchen with clear work zones and natural light" loading="lazy">
+          <figcaption>A working kitchen: clear zones, generous counter space, and light where it is needed.</figcaption>
+        </figure>
+
+        <h2>Counter Space: The Real Luxury</h2>
+        <p>In a kitchen, counter space is the measure of usability. The minimum for a functional kitchen is 60 centimeters of clear counter on either side of the sink, and the same on either side of the stove. Ideally, there should be at least one uninterrupted run of 90 centimeters or more for rolling pastry, assembling dishes, or laying out ingredients.</p>
+        <p>Counter space is expensive in a small kitchen. The solution is not to reduce it but to create it where it counts. A pull-out cutting board above a drawer. A section of counter that folds down when not needed. A trolley that can be wheeled into the center of the room during preparation and returned to the wall afterward.</p>
+
+        <h2>Storage: The Invisible Infrastructure</h2>
+        <p>Good kitchen storage is not about having more cabinets. It is about having the right cabinets in the right places. A tall pantry unit, floor to ceiling, will hold more than twice the volume of wall cabinets in the same footprint. Deep drawers below the counter are more useful than shallow cabinets above it, because they allow you to see and reach everything without moving objects in front.</p>
+        <p>Consider the weight and frequency of use. Heavy items — pots, appliances — belong in low drawers. Light, frequently used items — spices, utensils — belong at eye level or on a wall rail. Rarely used items belong high or in the depths of a pantry.</p>
+
+        <h3>Ventilation</h3>
+        <p>A kitchen without adequate ventilation will accumulate grease, moisture, and odor in every surface in the room. A recirculating hood is better than nothing, but a ducted hood that exhausts to the exterior is the only solution that truly works. If ducting is impossible, consider a downdraft extractor integrated into the hob.</p>
+
+        <h2>Materials That Age Gracefully</h2>
+        <p>The kitchen is the hardest-working room in the house. Materials that look beautiful in a showroom may perform badly in daily life. Stainless steel and quartz are durable but can feel cold. Natural stone is beautiful but stains. Solid timber is warm but requires maintenance.</p>
+        <p>The practical answer is often a combination: quartz or granite for the primary work surface, timber for a secondary surface where warmth matters, and a ceramic or porcelain tile splashback that can be cleaned easily. Floors should be hard-wearing and water-resistant — porcelain tile, sealed concrete, or engineered timber with a water-resistant core.</p>
+
+        <h2>Lighting the Kitchen</h2>
+        <p>Kitchen lighting has two jobs: to illuminate the work surface and to make the room feel comfortable when it is not being used for cooking. The work surface should be lit directly, ideally from fixtures beneath the upper cabinets or from a pendant that can be positioned over a counter. General illumination should be dimmable and warm, so that the kitchen can become a social space in the evening.</p>
+        <p>Avoid placing downlights directly above the counter edge, where they will cast shadow onto the work surface. Place them above the counter itself, or use a linear light source along the back edge of the counter.</p>
+
+        <h2>The Social Dimension</h2>
+        <p>The best modern kitchens acknowledge that cooking is often a social activity. This means providing space for someone to sit — a stool at the counter, a small table in a corner — without being in the way of the cook. It means designing the kitchen so that the cook can face the room, not the wall. It means accepting that the kitchen will sometimes be messy, and designing storage that can absorb clutter quickly when guests arrive.</p>
+      `
+    },
+    {
+      id: 'materials-that-age-well',
+      title: 'Materials That Age Well: A Field Guide to Finishes That Improve With Time',
+      category: 'materials',
+      categoryLabel: 'Materials',
+      excerpt: 'Some materials degrade. Others develop. Brass, timber, stone, lime plaster — the finishes that accumulate character rather than losing it.',
+      readingTime: '10 min read',
+      date: 'January 2026',
+      body: `
+        <p>The question every client asks about a material is: "How will it wear?" The assumption behind the question is that wear is bad — that a surface should look the same in ten years as it did on the day it was installed. This is a modern assumption, and it is wrong.</p>
+        <p>The materials that have been used in buildings for centuries — stone, timber, lime, brass, copper — were chosen not despite the fact that they change, but because of it. They develop. They acquire a record of use. They become more themselves over time.</p>
+
+        <h2>Brass: The Living Metal</h2>
+        <p>Polished brass is beautiful for about a week. Then it begins to change — a process called patination, in which the surface oxidizes and darkens, developing a mottled, warm character that no factory finish can replicate. Left unlacquered, brass will eventually settle into a deep, matte bronze. This is not a defect; it is the material's nature.</p>
+        <p>In practical terms, unlacquered brass is ideal for handles, taps, and light fixtures — objects that are handled frequently, where the patina develops unevenly and creates a visible record of touch. Lacquered brass, by contrast, will eventually chip, and the exposed areas will patinate while the rest remains shiny. Better to choose unlacquered and accept the change, or choose a different material entirely.</p>
+
+        <h2>Timber: The Patina of Use</h2>
+        <p>Solid timber floors are the most familiar example of a material that improves with age. A new pine floor is pale, uniform, and slightly raw. After a decade of use, it has developed a honeyed tone, softened edges, and a subtle unevenness of color that reads as depth. After fifty years, it is irreplaceable.</p>
+        <p>The key is to choose the right finish. A hard polyurethane lacquer will protect the timber but will eventually scratch, and when it does, the repair is difficult and visible. A penetrating oil or hardwax oil, by contrast, feeds the timber and can be spot-repaired without sanding the entire floor. It requires more frequent maintenance — an annual application in high-traffic areas — but the result is a floor that looks better every year.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Solid timber floor with visible patina and character in a contemporary interior" loading="lazy">
+          <figcaption>Timber that has darkened and softened with use — the patina becomes part of the design.</figcaption>
+        </figure>
+
+        <h2>Stone: The Invisible Sealer</h2>
+        <p>Natural stone — limestone, marble, travertine, slate — is porous, and most installers will recommend sealing it. But the sealing debate is more nuanced than it appears. A penetrating sealer, which sits below the surface and blocks the absorption of liquids, is generally useful. A topical sealer, which sits on the surface and creates a film, changes the feel of the stone and will eventually wear unevenly.</p>
+        <p>Unsealed stone will stain. But it will also develop a patina — a slight darkening and softening of the surface, particularly in areas of frequent contact. In a kitchen, this can be problematic. In a hallway or a bathroom, it can be beautiful. The decision is contextual.</p>
+
+        <h2>Lime Plaster: The Breathing Wall</h2>
+        <p>Modern gypsum plaster creates a smooth, uniform surface that is entirely inert. Lime plaster, by contrast, is porous and slightly alkaline. It absorbs moisture from the air and releases it, moderating humidity. It develops a subtle sheen — not from a coating, but from the compression of the lime crystals during application. It can be left unfinished, polished to a low sheen, or treated with a thin coat of lime wash that will fade gently over time.</p>
+        <p>The practical advantages of lime are significant: it is breathable (allowing moisture to migrate through the wall rather than trapping it), it is naturally resistant to mold, and it can be repaired with matching material. The disadvantage is cost and skill — a good lime plasterer is rare, and the application takes longer than gypsum.</p>
+
+        <h2>Copper and Bronze</h2>
+        <p>Copper begins bright, like a new penny, and darkens through a sequence of colors — brown, then blue, then the soft green of verdigris. This process takes years outdoors and decades indoors. Indoors, the most useful application is for sinks, splashbacks, and light fixtures, where the material's warmth and the subtlety of its aging are visible in daily use.</p>
+        <p>Bronze, an alloy of copper and tin, behaves similarly but more slowly, settling into a deep brown-black that is both neutral and rich. It is expensive but effectively permanent — a bronze handle installed today will be in use in a hundred years.</p>
+
+        <h2>The Principle</h2>
+        <p>The materials that age well share a common characteristic: they are homogeneous. Their color and texture come from their substance, not from a surface coating. When they wear, they reveal more of themselves, not less. This is the opposite of laminate, vinyl, and powder-coated metal, where wear reveals the substrate.</p>
+        <p>The design implication is simple: choose materials whose aging you are willing to accept. If you want a floor that looks new for decades, choose porcelain tile. If you want a floor that becomes more beautiful with every year of use, choose solid timber. Neither is wrong. But the choice should be conscious.</p>
+      `
+    },
+    {
+      id: 'bedroom-sanctuary-design',
+      title: 'The Bedroom as Sanctuary: Designing for Rest in a Distracted World',
+      category: 'interior-design',
+      categoryLabel: 'Interior Design',
+      excerpt: 'Sleep is not a design problem, but the room where it happens is. How to create a bedroom that supports rest rather than undermining it.',
+      readingTime: '9 min read',
+      date: 'December 2025',
+      body: `
+        <p>The bedroom is the most personal room in the house and, too often, the least considered. Living rooms are designed for guests. Kitchens are designed for function. Bedrooms are designed in the gaps — after the bed is placed, after the wardrobe is fitted, after everything else has been decided.</p>
+        <p>This is a mistake. Sleep is the foundation of everything else. A bedroom that supports rest is not a luxury; it is infrastructure.</p>
+
+        <h2>The Case for Darkness</h2>
+        <p>Human beings evolved to sleep in darkness. The modern bedroom, with its streetlights, standby LEDs, and glowing phone screens, is a hostile environment for sleep. The design response is straightforward: eliminate light sources at night, and make it easy to eliminate them.</p>
+        <p>Blackout curtains or blinds are the most effective single intervention. They should overlap the window frame on all sides, or be recessed into a pelmet, so that no light leaks around the edges. Roman blinds with a blackout lining are a good compromise between aesthetics and function; fully recessed roller blinds are more effective but less elegant.</p>
+        <p>Within the room, eliminate standby lights. A bedroom should be able to be completely dark. If a small amount of light is needed for orientation — a path to the bathroom — a floor-level motion sensor light is better than a permanent nightlight.</p>
+
+        <h2>Temperature</h2>
+        <p>The ideal sleeping temperature is between 16 and 19°C. Most bedrooms are too warm. The design implication is that heating in a bedroom should be independently controllable, and that the bed should not be placed directly above a radiator or under a south-facing window in summer.</p>
+        <p>Bedding materials matter. Natural fibers — cotton, linen, wool — breathe, allowing moisture to escape. Synthetic fibers trap heat and moisture, creating a microclimate that is uncomfortable for sleep.</p>
+
+        <h2>The Bed as Anchor</h2>
+        <p>In terms of design, the bed is the most important object in the room. It should be placed on a solid wall, ideally not directly under a window, with enough space on both sides for a person to get in and out comfortably. A minimum of 60 centimeters on each side is practical; 75 centimeters is generous.</p>
+        <p>The headboard, if there is one, should be tall enough to sit against comfortably — typically 90 to 120 centimeters above the mattress. It should be upholstered in a material that feels good against the skin and can be cleaned.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Calm bedroom interior with neutral tones and soft natural light" loading="lazy">
+          <figcaption>A bedroom designed for rest: muted palette, no visual noise, light controlled.</figcaption>
+        </figure>
+
+        <h2>Sound</h2>
+        <p>Noise is the second most common impediment to sleep, after light. The design response depends on the source. External noise — traffic, neighbors — is best addressed with physical mass: thick walls, double or triple glazing, heavy curtains. Internal noise — from other rooms — is addressed with solid-core doors and acoustic seals.</p>
+        <p>For persistent noise that cannot be eliminated at the source, a masking sound is more effective than silence. A quiet fan, a white noise machine, or a small water feature can smooth the acoustic environment without itself becoming a disturbance.</p>
+
+        <h2>Storage and Calm</h2>
+        <p>Clutter is visually loud. A bedroom with visible clutter — clothes on chairs, objects on surfaces — will feel less restful than a bedroom with clear surfaces and closed storage. This is not about minimalism as aesthetics; it is about reducing the number of things that demand attention.</p>
+        <p>The practical approach is to provide storage that is easy to use. A wardrobe with doors that close smoothly. Drawers that slide without sticking. A place for everything that tends to accumulate: books, chargers, glasses, water glass. If surfaces are clear at bedtime, the room will feel clear.</p>
+
+        <h2>The Palette</h2>
+        <p>Color affects mood, and mood affects sleep. The most restful bedrooms tend to use muted, low-contrast palettes: warm neutrals, soft grays, deep blues and greens in small doses. High-contrast schemes — black and white, bold patterns — are stimulating and are better suited to social spaces.</p>
+        <p>This does not mean bedrooms must be beige. A deep green or a soft terracotta can be both restful and characterful. The key is saturation and contrast: colors that are muted rather than vivid, and combinations that are harmonious rather than striking.</p>
+      `
+    },
+    {
+      id: 'floor-plan-guide',
+      title: 'Reading a Floor Plan: What to Look For Before You Buy or Renovate',
+      category: 'space-planning',
+      categoryLabel: 'Space Planning',
+      excerpt: 'A floor plan is not a diagram. It is a prediction of how you will live. How to read one — and what most people miss.',
+      readingTime: '10 min read',
+      date: 'December 2025',
+      body: `
+        <p>The floor plan is the most underrated document in residential design. Buyers focus on kitchens and bathrooms. Renovators focus on finishes. But the floor plan determines everything that happens after: where you walk, where you sit, where the light falls, how the rooms connect to each other and to the outside.</p>
+        <p>Learning to read a floor plan is a practical skill. It takes an hour to learn the basics and a lifetime to master the nuances.</p>
+
+        <h2>Start with the Walls</h2>
+        <p>The first thing to identify on any floor plan is which walls are load-bearing and which are not. On a professional drawing, load-bearing walls are typically drawn with a thicker line, often hatched or filled. On a marketing plan, they may not be distinguished at all.</p>
+        <p>This matters because removing a load-bearing wall requires structural engineering, whereas removing a partition wall is comparatively straightforward. The difference in cost can be tenfold. Before falling in love with an open-plan conversion, check which walls can actually be moved.</p>
+
+        <h2>Trace the Circulation</h2>
+        <p>Place a finger on the front door of the plan. Trace the path you would take to the kitchen. Then to the living room. Then to the bedroom, the bathroom, the garden. Are these paths direct? Do they cross each other? Do they pass through rooms that should be private?</p>
+        <p>The most common floor plan flaw is circulation that runs through the center of a room rather than around its edge. A living room with a path straight through the middle cannot be furnished comfortably. A bedroom with a path from the door to the bathroom through the sleeping area will feel exposed.</p>
+
+        <h2>Look for Wasted Space</h2>
+        <p>Every floor plan has some. A hallway that is wider than it needs to be. A corner that cannot be used. A space behind a door that is too shallow for storage. These are not always problems — sometimes a wide hallway is a feature, a place to hang art, a buffer between rooms — but they should be acknowledged.</p>
+        <p>More important is the opposite: identify spaces that are used intensely and see whether they have enough room. The kitchen work zone. The entry point where coats and shoes accumulate. The area beside the bed.</p>
+
+        <figure class="article-image">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Architectural floor plan drawing with pencil and scale ruler" loading="lazy">
+          <figcaption>A floor plan is a prediction: it describes how a space will be used before anyone moves in.</figcaption>
+        </figure>
+
+        <h2>Measure the Furniture</h2>
+        <p>A floor plan without furniture is abstract. A floor plan with furniture reveals whether the room actually works. Before buying or renovating, take the dimensions of your largest pieces — sofa, bed, dining table — and place them on the plan to scale.</p>
+        <p>This simple exercise reveals problems that are invisible in an empty room. A sofa that fits beautifully in a drawing may block a doorway in reality. A dining table that seats eight may leave no room for chairs to pull out.</p>
+
+        <h2>The Light</h2>
+        <p>Floor plans do not show light, but they imply it. Identify which direction each room faces. A south-facing living room will be bright all day and warm in summer. A north-facing bedroom will be cool and dim. An east-facing kitchen will be bright in the morning and dark by afternoon.</p>
+        <p>These are not insurmountable facts, but they are facts. A dark room can be lightened with pale surfaces and good lighting, but it will never be a sunny room. A hot room can be cooled with blinds and ventilation, but it will always require management.</p>
+
+        <h2>The Outdoor Connection</h2>
+        <p>How does the plan connect to the outside? Is there a door from the kitchen to the garden, or must you walk through the living room? Is there a window in the bathroom, or is it internal? Can you see a tree from the main living space, or does the view terminate at a fence?</p>
+        <p>Access to outdoor space, even a small balcony or a window that opens onto a courtyard, is one of the strongest predictors of residential satisfaction. A floor plan that ignores this will feel closed-in regardless of its internal qualities.</p>
+
+        <h2>The Renovation Question</h2>
+        <p>For anyone considering a renovation, the floor plan is the primary document. The question is not "what finishes do I want?" but "how do I want to live, and does this plan support that?" A renovation that changes finishes but leaves the plan intact will produce a fresher version of the same experience. A renovation that changes the plan can produce a different life.</p>
+      `
+    }
+  ];
+
+  // ========== STATE ==========
+  let currentFilter = 'all';
+  let searchQuery = '';
+  let currentView = 'home';
+
+  // ========== DOM REFS ==========
+  const articleGrid = document.getElementById('articleGrid');
+  const featuredSection = document.getElementById('featuredSection');
+  const popularList = document.getElementById('popularList');
+  const latestList = document.getElementById('latestList');
+  const homeView = document.getElementById('homeView');
+  const articleDetail = document.getElementById('articleDetail');
+  const articleBody = document.getElementById('articleBody');
+  const searchInput = document.getElementById('searchInput');
+  const categoryPills = document.getElementById('categoryPills');
+  const mainNav = document.getElementById('mainNav');
+
+  // ========== RENDER FUNCTIONS ==========
+  function renderArticles() {
+    let filtered = articles.filter(a => {
+      const matchesFilter = currentFilter === 'all' || a.category === currentFilter;
+      const matchesSearch = !searchQuery ||
+        a.title.toLowerCase().includes(searchQuery) ||
+        a.excerpt.toLowerCase().includes(searchQuery) ||
+        a.categoryLabel.toLowerCase().includes(searchQuery) ||
+        a.body.toLowerCase().includes(searchQuery);
+      return matchesFilter && matchesSearch;
+    });
+
+    // Hide featured on filtered/search views
+    if (currentFilter === 'all' && !searchQuery && currentView === 'home') {
+      featuredSection.classList.remove('hidden');
+    } else {
+      featuredSection.classList.add('hidden');
+    }
+
+    // Remove featured from grid if it's showing in featured section
+    if (currentFilter === 'all' && !searchQuery) {
+      filtered = filtered.filter(a => !a.featured);
+    }
+
+    if (filtered.length === 0) {
+      articleGrid.innerHTML = `<p style="color:var(--ink-muted);font-style:italic;grid-column:1/-1;">No articles found. Try a different search or category.</p>`;
+      return;
+    }
+
+    articleGrid.innerHTML = filtered.map(a => `
+      <article class="article-card">
+        <span class="category-tag">${a.categoryLabel}</span>
+        <h3><a href="#" onclick="openArticle('${a.id}'); return false;">${a.title}</a></h3>
+        <p class="excerpt">${a.excerpt}</p>
+        <div class="meta">
+          <span>${a.readingTime}</span>
+          <span>${a.date}</span>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  function renderSidebar() {
+    const popular = articles.filter(a => a.popular).slice(0, 4);
+    const latest = [...articles].reverse().slice(0, 5);
+
+    popularList.innerHTML = popular.map(a => `
+      <li>
+        <a href="#" onclick="openArticle('${a.id}'); return false;">${a.title}</a>
+        <span class="meta">${a.readingTime}</span>
+      </li>
+    `).join('');
+
+    latestList.innerHTML = latest.map(a => `
+      <li>
+        <a href="#" onclick="openArticle('${a.id}'); return false;">${a.title}</a>
+        <span class="meta">${a.categoryLabel}</span>
+      </li>
+    `).join('');
+  }
+
+  function openArticle(id) {
+    const article = articles.find(a => a.id === id);
+    if (!article) return;
+
+    currentView = 'article';
+    homeView.classList.add('hidden');
+    articleDetail.classList.add('active');
+    document.querySelectorAll('.static-page').forEach(p => p.classList.remove('active'));
+
+    // Build related articles
+    const related = articles.filter(a => a.id !== id && a.category === article.category).slice(0, 3);
+    const relatedHtml = related.length > 0 ? `
+      <div class="related-articles">
+        <h2 class="section-heading">Related Reading</h2>
+        <div class="article-grid">
+          ${related.map(a => `
+            <article class="article-card">
+              <span class="category-tag">${a.categoryLabel}</span>
+              <h3><a href="#" onclick="openArticle('${a.id}'); return false;">${a.title}</a></h3>
+              <p class="excerpt">${a.excerpt}</p>
+              <div class="meta"><span>${a.readingTime}</span><span>${a.date}</span></div>
+            </article>
+          `).join('')}
+        </div>
+      </div>
+    ` : '';
+
+    articleBody.innerHTML = `
+      <span class="category-tag" style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);font-weight:600;">${article.categoryLabel}</span>
+      <h1>${article.title}</h1>
+      <div class="article-meta">
+        <span>By Elena Marchetti</span>
+        <span>${article.readingTime}</span>
+        <span>${article.date}</span>
+      </div>
+      ${article.body}
+      <div class="author-box">
+        <div class="author-avatar">EM</div>
+        <div>
+          <h4>Elena Marchetti</h4>
+          <p>Elena is the founding editor of Heritage Modern Spaces. A former editor at <em>Domus</em>, she writes on architecture, interiors, and the history of domestic space. She lives in a nineteenth-century apartment in Turin that she is slowly — very slowly — renovating.</p>
+        </div>
+      </div>
+      ${relatedHtml}
+    `;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showHome() {
+    currentView = 'home';
+    articleDetail.classList.remove('active');
+    homeView.classList.remove('hidden');
+    document.querySelectorAll('.static-page').forEach(p => p.classList.remove('active'));
+    renderArticles();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showPage(page) {
+    currentView = 'page';
+    homeView.classList.add('hidden');
+    articleDetail.classList.remove('active');
+    document.querySelectorAll('.static-page').forEach(p => p.classList.remove('active'));
+
+    const pageEl = document.getElementById('page' + page.charAt(0).toUpperCase() + page.slice(1));
+    if (pageEl) pageEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function filterArticles(category) {
+    currentFilter = category;
+    currentView = 'home';
+    searchQuery = '';
+    searchInput.value = '';
+    homeView.classList.remove('hidden');
+    articleDetail.classList.remove('active');
+    document.querySelectorAll('.static-page').forEach(p => p.classList.remove('active'));
+
+    // Update pills
+    document.querySelectorAll('#categoryPills button').forEach(btn => btn.classList.remove('active'));
+    const pill = [...document.querySelectorAll('#categoryPills button')].find(b =>
+      b.textContent.toLowerCase().replace(/\s+/g, '-') === category || (category === 'all' && b.textContent === 'All')
+    );
+    if (pill) pill.classList.add('active');
+
+    renderArticles();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function searchArticles() {
+    searchQuery = searchInput.value.trim().toLowerCase();
+    if (currentView !== 'home') {
+      showHome();
+    }
+    renderArticles();
+  }
+
+  function toggleNav() {
+    mainNav.classList.toggle('open');
+  }
+
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // ========== INIT ==========
+  renderArticles();
+  renderSidebar();
+
+  // ========== KEYBOARD SHORTCUT ==========
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape') {
+      searchInput.blur();
+      showHome();
+    }
+  });
+
+  // ========== SCHEMA MARKUP ==========
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Heritage Modern Spaces",
+    "description": "An independent journal of architecture, interior design, and the art of living well.",
+    "url": "https://heritagemodernspaces.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Heritage Modern Spaces"
+    },
+    "blogPost": articles.slice(0, 5).map(a => ({
+      "@type": "BlogPosting",
+      "headline": a.title,
+      "description": a.excerpt,
+      "author": { "@type": "Person", "name": "Elena Marchetti" },
+      "datePublished": "2026-03-01"
+    }))
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+</script>
+
+</body>
+</html>

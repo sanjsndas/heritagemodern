@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Heritage Modern Spaces</title>
+  <meta name="description" content="Heritage Modern Spaces is an independent journal exploring architecture, interior design, and the art of living well.">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ed;
+      --border: #e0ddd8;
+      --border-dark: #c8c4bc;
+      --accent: #8b7355;
+      --accent-light: #b8a88a;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --content-width: 740px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.25; color: var(--ink); }
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.7rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1.1rem; color: var(--ink-light); }
+    .drop-cap::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.5rem;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .content-narrow { max-width: var(--content-width); margin: 0 auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-mark span { transform: rotate(-45deg); }
+    .logo em { font-style: normal; color: var(--accent); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0.4rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      max-width: 240px;
+      flex-shrink: 0;
+    }
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      width: 100%;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-bar input::placeholder { color: var(--ink-muted); font-style: italic; }
+    .search-bar button {
+      background: none;
+      border: none;
+      padding: 0.45rem 0.7rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* ========== MAIN LAYOUT ========== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* ========== ABOUT PAGE STYLES ========== */
+    .about-page {
+      padding: 3rem 0 4rem;
+      background: var(--paper);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      margin-top: 1.5rem;
+    }
+    .about-intro {
+      max-width: 680px;
+    }
+    .about-intro h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+    .about-intro .lead {
+      font-size: 1.15rem;
+      color: var(--ink-light);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .about-intro p {
+      font-size: 1rem;
+      color: var(--ink-light);
+    }
+    .about-intro .drop-cap::first-letter {
+      font-family: var(--serif);
+      font-size: 3.8rem;
+      float: left;
+      line-height: 0.8;
+      padding-right: 0.5rem;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .about-sidebar {
+      background: var(--paper-alt);
+      padding: 2rem 2rem 1.8rem;
+      border: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .about-sidebar h3 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-muted);
+      font-family: var(--sans);
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-sidebar ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .about-sidebar li {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+    }
+    .about-sidebar li:last-child { border-bottom: none; }
+    .about-sidebar li span:first-child {
+      color: var(--ink-muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .about-sidebar li span:last-child {
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .about-sidebar .quote {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      font-family: var(--serif);
+    }
+    .about-sidebar .quote em {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      font-family: var(--sans);
+    }
+
+    .about-principles {
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .about-principles h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+    .principle-item h4 {
+      font-size: 1rem;
+      font-family: var(--serif);
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+    }
+    .principle-item p {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.65;
+    }
+    .principle-item .num {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--paper-alt);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.85rem; color: var(--ink-light); }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .principles-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 680px) {
+      h1 { font-size: 1.8rem; }
+      .about-intro h1 { font-size: 2.1rem; }
+      .header-inner { flex-wrap: wrap; gap: 0.8rem; }
+      .search-bar { max-width: 100%; order: 3; flex: 1 1 100%; }
+      .nav-toggle { display: block; }
+      .main-nav { display: none; width: 100%; order: 4; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 0; }
+      .main-nav a { display: block; padding: 0.5rem 0.2rem; border-bottom: 1px solid var(--border); }
+      .principles-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .about-sidebar { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><span>HM</span></span>
+      Heritage<em>Modern</em>Spaces
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles…">
+      <button>⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ABOUT PAGE CONTENT ========== -->
+<main class="about-page">
+  <div class="container">
+
+    <!-- INTRO + SIDEBAR -->
+    <div class="about-grid">
+      <div class="about-intro">
+        <h1>About Heritage Modern Spaces</h1>
+        <p class="lead">An independent journal exploring the intersection of architectural tradition and contemporary living. We publish long-form guides, design principles, and practical knowledge for people who care about how spaces feel.</p>
+
+        <p class="drop-cap">Heritage Modern Spaces was founded in 2021 with a simple conviction: that the way we shape our built environment shapes the way we live. We publish in-depth writing on architecture, interior design, materials, and the quiet craft of making a home.</p>
+
+        <p>We believe design writing should be useful. Every article is written to be read slowly — with enough depth to inform a real decision, a renovation, or a shift in perspective. We avoid trend lists, shallow roundups, and corporate promotion. What we publish is the result of research, observation, and conversations with architects, makers, and residents.</p>
+
+        <p>Our contributors include architects, interior designers, historians, and writers based across Europe and North America. The publication is edited by Elena Marchetti, an architectural historian and former editor at <em>Domus</em>. She lives in a nineteenth-century apartment in Turin that she is slowly — very slowly — renovating.</p>
+      </div>
+
+      <aside class="about-sidebar">
+        <h3>At a Glance</h3>
+        <ul>
+          <li><span>Founded</span> <span>2021</span></li>
+          <li><span>Editor</span> <span>Elena Marchetti</span></li>
+          <li><span>Based</span> <span>Turin, Italy</span></li>
+          <li><span>Focus</span> <span>Architecture & Interiors</span></li>
+          <li><span>Approach</span> <span>Independent, ad-free</span></li>
+        </ul>
+
+        <h3>Editorial Independence</h3>
+        <p style="font-size:0.88rem; color:var(--ink-muted); margin-bottom:0;">We accept no sponsored content and receive no payment from brands or manufacturers. When we mention products or materials, it is because they are relevant to the subject at hand — not because someone paid for the placement.</p>
+
+        <div class="quote">
+          “A room is not a container. It is a conversation between light, material, and the person who inhabits it.”
+          <em>— Elena Marchetti, Editor</em>
+        </div>
+      </aside>
+    </div>
+
+    <!-- PRINCIPLES -->
+    <section class="about-principles">
+      <h2>What We Stand For</h2>
+      <div class="principles-grid">
+        <div class="principle-item">
+          <span class="num">01</span>
+          <h4>Depth over speed</h4>
+          <p>We publish less, but we publish with intention. Every piece is researched, considered, and edited for clarity. We would rather write one useful essay than ten shallow ones.</p>
+        </div>
+        <div class="principle-item">
+          <span class="num">02</span>
+          <h4>Independence</h4>
+          <p>No sponsored posts. No affiliate links. No brand partnerships. Our only obligation is to the reader. This keeps our recommendations honest and our perspective clear.</p>
+        </div>
+        <div class="principle-item">
+          <span class="num">03</span>
+          <h4>Practical beauty</h4>
+          <p>We care about how things look, but we care more about how they work. The best design is both beautiful and functional — and we write about the intersection of the two.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0.8rem;">
+          <span class="logo-mark"><span>HM</span></span>
+          Heritage<em>Modern</em>Spaces
+        </div>
+        <p>An independent journal of architecture, interior design, and the art of living well. Published since 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="index.html">Interior Design</a></li>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="index.html">Home Design</a></li>
+          <li><a href="index.html">Materials</a></li>
+          <li><a href="index.html">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heritage Modern Spaces. All rights reserved.</span>
+      <span>Made with care for people who read slowly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ========== NAV TOGGLE (MOBILE) ==========
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+
+  // ========== SEARCH (placeholder — redirects to home with query) ==========
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      const q = this.value.trim();
+      if (q) {
+        window.location.href = 'index.html?search=' + encodeURIComponent(q);
+      }
+    }
+  });
+
+  // ========== ACTIVE NAV HIGHLIGHT ==========
+  // Already set via class="active" on the About link
+</script>
+
+</body>
+</html>

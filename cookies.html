@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Policy — Heritage Modern Spaces</title>
+  <meta name="description" content="Cookies Policy for Heritage Modern Spaces — how we use cookies and similar technologies, and how you can control them.">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #6b6b6b;
+      --paper: #faf9f7;
+      --paper-alt: #f3f1ed;
+      --border: #e0ddd8;
+      --border-dark: #c8c4bc;
+      --accent: #8b7355;
+      --accent-light: #b8a88a;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --content-width: 740px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.25; color: var(--ink); }
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.7rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    h4 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    p { margin-bottom: 1.1rem; color: var(--ink-light); }
+
+    /* ========== LAYOUT ========== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .content-narrow { max-width: var(--content-width); margin: 0 auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-family: var(--sans);
+      letter-spacing: 0.05em;
+      transform: rotate(45deg);
+      margin-right: 0.2rem;
+    }
+    .logo-mark span { transform: rotate(-45deg); }
+    .logo em { font-style: normal; color: var(--accent); }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      padding: 0.4rem 0.6rem;
+      transition: color 0.2s;
+    }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+
+    /* ========== SEARCH BAR ========== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: var(--paper-alt);
+      max-width: 240px;
+      flex-shrink: 0;
+    }
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 0.45rem 0.7rem;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      width: 100%;
+      outline: none;
+      color: var(--ink);
+    }
+    .search-bar input::placeholder { color: var(--ink-muted); font-style: italic; }
+    .search-bar button {
+      background: none;
+      border: none;
+      padding: 0.45rem 0.7rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* ========== COOKIES PAGE ========== */
+    .cookies-page {
+      padding: 3.5rem 0 4rem;
+    }
+    .cookies-page .page-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cookies-page .page-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .cookies-page .page-header p {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 620px;
+      margin-bottom: 0;
+    }
+    .cookies-page .page-header .last-updated {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* Policy content */
+    .policy-content {
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+    .policy-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-content h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+    .policy-content h3 {
+      font-size: 1.15rem;
+      margin-top: 1.6rem;
+      margin-bottom: 0.5rem;
+      font-family: var(--serif);
+      color: var(--ink);
+    }
+    .policy-content p {
+      font-size: 0.98rem;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    .policy-content ul, .policy-content ol {
+      margin: 0.6rem 0 1.2rem 1.5rem;
+      color: var(--ink-light);
+      font-size: 0.98rem;
+    }
+    .policy-content li {
+      margin-bottom: 0.4rem;
+    }
+    .policy-content strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .policy-content a {
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .policy-content a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .policy-note {
+      background: var(--paper-alt);
+      border-left: 3px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+    }
+    .policy-note p {
+      margin-bottom: 0;
+    }
+
+    /* Cookie summary cards */
+    .cookie-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .summary-card {
+      background: var(--paper-alt);
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.3rem;
+    }
+    .summary-card h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-family: var(--sans);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .summary-card p {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* Cookie table */
+    .cookie-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0 2rem;
+      border: 1px solid var(--border);
+      background: var(--paper);
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      min-width: 640px;
+    }
+    .cookie-table th {
+      background: var(--paper-alt);
+      text-align: left;
+      padding: 0.8rem 1rem;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .cookie-table td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-light);
+      vertical-align: top;
+    }
+    .cookie-table tr:last-child td {
+      border-bottom: none;
+    }
+    .cookie-table td:first-child {
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .cookie-table .cookie-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--paper-alt);
+      padding: 3rem 0 2rem;
+      margin-top: 2rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      max-width: 300px;
+      line-height: 1.7;
+    }
+    .footer-col h5 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 0.9rem;
+      font-family: var(--sans);
+      font-weight: 600;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    .footer-col a { font-size: 0.85rem; color: var(--ink-light); }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 960px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .cookie-summary { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      h1 { font-size: 1.8rem; }
+      .cookies-page .page-header h1 { font-size: 1.9rem; }
+      .header-inner { flex-wrap: wrap; gap: 0.8rem; }
+      .search-bar { max-width: 100%; order: 3; flex: 1 1 100%; }
+      .nav-toggle { display: block; }
+      .main-nav { display: none; width: 100%; order: 4; }
+      .main-nav.open { display: block; }
+      .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 0; }
+      .main-nav a { display: block; padding: 0.5rem 0.2rem; border-bottom: 1px solid var(--border); }
+      .cookie-summary { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .policy-content h2 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><span>HM</span></span>
+      Heritage<em>Modern</em>Spaces
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html" class="active">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search articles…" oninput="handleSearch()">
+      <button onclick="handleSearch()">⌕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== COOKIES PAGE ========== -->
+<main class="container cookies-page">
+  <div class="page-header">
+    <h1>Cookies Policy</h1>
+    <p>This policy explains how Heritage Modern Spaces uses cookies and similar technologies, what they do, and how you can control them. We keep our cookie use minimal and respectful.</p>
+    <div class="last-updated">Last updated: 1 January 2026</div>
+  </div>
+
+  <div class="policy-content">
+    <!-- Quick summary cards -->
+    <div class="cookie-summary">
+      <div class="summary-card">
+        <h4>Minimal cookies</h4>
+        <p>We only use a small number of cookies — most are essential for the site to function properly.</p>
+      </div>
+      <div class="summary-card">
+        <h4>No tracking for ads</h4>
+        <p>We do not use cookies for advertising, profiling, or selling your data to third parties.</p>
+      </div>
+      <div class="summary-card">
+        <h4>You're in control</h4>
+        <p>You can block or delete cookies anytime through your browser settings. It's your choice.</p>
+      </div>
+    </div>
+
+    <h2>1. What Are Cookies?</h2>
+    <p>Cookies are small text files that are stored on your device (computer, tablet, or phone) when you visit a website. They help websites remember your preferences, keep you logged in, and understand how visitors use the site.</p>
+    <p>Similar technologies include <strong>local storage</strong>, <strong>session storage</strong>, and <strong>pixel tags</strong>. For simplicity, we refer to all of these as "cookies" in this policy.</p>
+
+    <h2>2. How We Use Cookies</h2>
+    <p>We use cookies for a few limited purposes:</p>
+    <ul>
+      <li><strong>Essential functionality:</strong> To make the site work properly — for example, remembering your cookie preferences.</li>
+      <li><strong>Analytics:</strong> To collect anonymous, aggregated data about how visitors use our site, so we can improve content and navigation.</li>
+      <li><strong>Preferences:</strong> To remember small choices you make, such as dismissing a notice.</li>
+    </ul>
+    <p>We do <strong>not</strong> use cookies for advertising, retargeting, or cross-site tracking. We do not sell or share cookie data with advertisers or data brokers.</p>
+
+    <div class="policy-note">
+      <p><strong>Our approach:</strong> We believe cookies should serve you, not the other way around. We keep them to a minimum and only use them where they genuinely improve your experience.</p>
+    </div>
+
+    <h2>3. Types of Cookies We Use</h2>
+    <p>Below is a detailed list of the cookies you may encounter on our site:</p>
+
+    <div class="cookie-table-wrap">
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Cookie name</th>
+            <th>Category</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>hms_consent</td>
+            <td><span class="cookie-category">Essential</span></td>
+            <td>Stores your cookie consent choices so we don't ask you repeatedly.</td>
+            <td>12 months</td>
+          </tr>
+          <tr>
+            <td>hms_session</td>
+            <td><span class="cookie-category">Essential</span></td>
+            <td>Maintains basic session state for site functionality.</td>
+            <td>Session</td>
+          </tr>
+          <tr>
+            <td>_ga</td>
+            <td><span class="cookie-category">Analytics</span></td>
+            <td>Used by Google Analytics to distinguish unique visitors (anonymized IP).</td>
+            <td>24 months</td>
+          </tr>
+          <tr>
+            <td>_ga_*</td>
+            <td><span class="cookie-category">Analytics</span></td>
+            <td>Used by Google Analytics to maintain session state.</td>
+            <td>24 months</td>
+          </tr>
+          <tr>
+            <td>hms_prefs</td>
+            <td><span class="cookie-category">Preferences</span></td>
+            <td>Remembers small display preferences (e.g., dismissed notices).</td>
+            <td>6 months</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><em>Note: Cookie names and durations may change slightly as we update our site. We will update this table when they do.</em></p>
+
+    <h2>4. Third-Party Cookies</h2>
+    <p>Some cookies are set by third-party services we use:</p>
+    <ul>
+      <li><strong>Google Analytics:</strong> We use Google Analytics to understand site traffic and behavior. The data is anonymized and aggregated. You can learn more in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and opt out via <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out</a>.</li>
+      <li><strong>Email delivery:</strong> If you subscribe to our newsletter, our email service provider may use tracking pixels to measure open rates. You can disable image loading in your email client to prevent this.</li>
+    </ul>
+    <p>We do not control third-party cookies. Please refer to the respective providers' policies for more information.</p>
+
+    <h2>5. How to Control Cookies</h2>
+    <p>You have several options for managing or disabling cookies:</p>
+    <ul>
+      <li><strong>Browser settings:</strong> Most browsers allow you to block or delete cookies. Look for "Settings", "Preferences", or "Privacy" in your browser menu.</li>
+      <li><strong>Cookie consent:</strong> When you first visit our site, you can choose which non-essential cookies to accept via our consent banner.</li>
+      <li><strong>Opt-out tools:</strong> For analytics, you can use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
+    </ul>
+    <p>Please note that blocking essential cookies may affect how the site functions. Disabling analytics cookies will not affect your experience — it just means we won't see your visit in our anonymous statistics.</p>
+
+    <h3>Browser-specific instructions</h3>
+    <ul>
+      <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
+      <li><strong>Firefox:</strong> Options → Privacy &amp; Security → Cookies and Site Data</li>
+      <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data</li>
+      <li><strong>Edge:</strong> Settings → Cookies and site permissions → Manage and delete cookies</li>
+    </ul>
+
+    <h2>6. Do Not Track Signals</h2>
+    <p>Some browsers offer a "Do Not Track" (DNT) feature. Because there is no industry consensus on how to interpret DNT signals, our site does not currently respond to them. However, we do not engage in cross-site tracking, so DNT signals have limited relevance here.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this Cookies Policy from time to time to reflect changes in technology, regulation, or our practices. When we make significant changes, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions about our use of cookies or this policy, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:privacy@heritagemodernspaces.com">privacy@heritagemodernspaces.com</a></li>
+      <li><strong>Post:</strong> Heritage Modern Spaces, Via della Rocca 14, 10123 Torino, Italy</li>
+    </ul>
+    <p>For more information about how we handle personal data generally, please see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <div class="policy-note" style="margin-top:2.5rem;">
+      <p><em>This policy is provided for general informational purposes and does not constitute legal advice. For specific legal concerns, please consult a qualified professional.</em></p>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:0.8rem;">
+          <span class="logo-mark"><span>HM</span></span>
+          Heritage<em>Modern</em>Spaces
+        </div>
+        <p>An independent journal of architecture, interior design, and the art of living well. Published since 2021.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Sections</h5>
+        <ul>
+          <li><a href="index.html">Interior Design</a></li>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="index.html">Home Design</a></li>
+          <li><a href="index.html">Materials</a></li>
+          <li><a href="index.html">Lighting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Heritage Modern Spaces. All rights reserved.</span>
+      <span>Made with care for people who read slowly.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  // ---------- Nav toggle ----------
+  function toggleNav() {
+    document.getElementById('mainNav').classList.toggle('open');
+  }
+
+  // ---------- Search (redirect to home page) ----------
+  function handleSearch() {
+    const query = document.getElementById('searchInput').value.trim();
+    if (query) {
+      window.location.href = 'index.html?search=' + encodeURIComponent(query);
+    }
+  }
+  document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSearch();
+    }
+  });
+
+  // ---------- Keyboard shortcut: / to focus search ----------
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !e.ctrlKey && !e.metaKey && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      document.getElementById('searchInput').focus();
+    }
+  });
+</script>
+
+</body>
+</html>
